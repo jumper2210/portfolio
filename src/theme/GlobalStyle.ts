@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
     *, *::before, *::after {
         box-sizing: border-box;
         border: 0;
+        margin: 0;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -webkit-tap-highlight-color: transparent;
@@ -24,8 +25,6 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    color: ${({ theme }) => theme.color}
-    background: ${({ theme }) => theme.background};
     font-family: ${({ theme }) => theme.fonts.mainFont};
     font-size: 1.6rem;
     overflow-x: hidden;

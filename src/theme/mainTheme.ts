@@ -3,8 +3,11 @@ export const theme = {
     mainFont: `'Poppins', sans-serif`,
     subFont: `'Kalam', cursive`,
   },
-  color_primary: `rgb(31, 31, 31)`,
-  background: `rgb(21, 21, 21)`,
+  color_primary: `#D44D5C`,
+  color_secondary: `#FF808E`,
+  accent: `#FF5CB0`,
+  color_white: `#ffff`,
+
   fontSize: {
     xs: "1.4rem",
     s: "1.6rem",
