@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         border: 0;
         margin: 0;
+        scroll-behavior: smooth;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         -webkit-tap-highlight-color: transparent;
@@ -21,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
   }
   b {
-    font-weight: ${({ theme }) => theme.medium}
+     font-weight: ${({ theme }) => theme.medium}
   }
 
   body {
