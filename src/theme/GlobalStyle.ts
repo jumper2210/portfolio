@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
         font-size: 62.5%;
   }
   b {
-     font-weight: ${({ theme }) => theme.medium}
+     font-weight: ${({ theme }) => theme.fontWeight.medium}
   }
 
   body {
