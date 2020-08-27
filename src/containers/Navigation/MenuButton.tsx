@@ -14,8 +14,7 @@ const SVG = styled.svg`
   `
 const Line = styled.path`
   fill: none;
-  // transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
-  stroke: ${({ theme }) => theme.colors.accent};
+  stroke: ${({ theme }) => theme.colors.color_secondary};
   stroke-width: 5.5;
   stroke-linecap: round;
 `

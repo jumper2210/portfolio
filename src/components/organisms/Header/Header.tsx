@@ -18,12 +18,14 @@ const TextMainWrapper = styled.div`
   align-items: center;
 `
 const MainTitle = styled.h2`
-  color: ${({ theme }) => theme.colors.color_white};
+  color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.xlg};
+  font-family: ${({ theme }) => theme.fonts.subFont};
 `
 const SubTitle = styled.h3`
-  color: ${({ theme }) => theme.colors.color_white};
+  color: ${({ theme }) => theme.colors.grey};
   font-size: ${({ theme }) => theme.fontSize.s};
+  font-family: ${({ theme }) => theme.fonts.subFont};
 `
 
 const Header = () => {
