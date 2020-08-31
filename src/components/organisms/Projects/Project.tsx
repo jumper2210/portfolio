@@ -7,6 +7,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  justify-content: center;
+  align-items: center;
 `
 
 const ButtonsWrapper = styled.div`
@@ -20,8 +22,18 @@ const ImageWrapper = styled.div`
   position: relative;
   width: 100%;
 `
+const ProjectTitle = styled.h4`
+  color: ${({ theme }) => theme.colors.white};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
+  text-transform: uppercase;
+`
+
 const TitleWrapper = styled.div``
 const DescriptionWrapper = styled.div``
+const ProjectDescription = styled.p`
+  color: ${({ theme }) => theme.colors.white};
+  font-family: ${({ theme }) => theme.fonts.subFont};
+`
 
 interface Props {
   title: string
@@ -34,11 +46,15 @@ interface Props {
 const Project = ({ title, description, demoLink, codeLink, image }: Props) => {
   return (
     <Wrapper>
-      <TitleWrapper>{title}</TitleWrapper>
+      <TitleWrapper>
+        <ProjectTitle>{title}</ProjectTitle>
+      </TitleWrapper>
       <ImageWrapper>
         <Image fluid={image} alt={title} />
       </ImageWrapper>
-      <DescriptionWrapper>{description}</DescriptionWrapper>
+      <DescriptionWrapper>
+        <ProjectDescription>{description}</ProjectDescription>
+      </DescriptionWrapper>
       <ButtonsWrapper>
         <Button
           as="a"

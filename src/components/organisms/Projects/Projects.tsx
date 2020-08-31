@@ -14,7 +14,7 @@ const TitleWrapper = styled.div`
   align-items: center;
 `
 
-const ProjectTitle = styled.h3`
+const ProjectsSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
 `
 const ProjectsWrapper = styled.div`
@@ -62,7 +62,7 @@ const Projects = () => {
   return (
     <Wrapper>
       <TitleWrapper>
-        <ProjectTitle>My projects</ProjectTitle>
+        <ProjectsSectionTitle>My projects</ProjectsSectionTitle>
       </TitleWrapper>
       <ProjectsWrapper>
         {allProjectsJson.nodes.map(
