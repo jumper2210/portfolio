@@ -21,7 +21,7 @@ export const theme = {
     accent: `#5444E0`,
     white: `#ffff`,
     grey: `#A1A1A9`,
-    button: `linear-gradient(128deg, rgba(84,68,224,1) 0%, rgba(139,75,227,1) 53%);`,
+    button: `linear-gradient(128deg, rgba(84,68,224,1) 0%, rgba(139,75,227,1) 63%);`,
   },
   fontWeight: {
     light: 300,

@@ -1,0 +1,85 @@
+import React from "react"
+import Project from "./Project"
+import { FluidObject } from "gatsby-image"
+import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+
+const Wrapper = styled.section`
+  background-color: ${({ theme }) => theme.colors.color_primary};
+`
+
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ProjectTitle = styled.h3`
+  color: ${({ theme }) => theme.colors.white};
+`
+const ProjectsWrapper = styled.div`
+  display: grid;
+`
+interface QueryProjectProps {
+  allProjectsJson: {
+    nodes: [
+      {
+        title: string
+        description: string
+        demoLink: string
+        codeLink: string
+        image: {
+          childImageSharp: {
+            fluid: FluidObject
+          }
+        }
+      }
+    ]
+  }
+}
+
+const Projects = () => {
+  const { allProjectsJson } = useStaticQuery<QueryProjectProps>(graphql`
+    {
+      allProjectsJson {
+        nodes {
+          title
+          description
+          demoLink
+          codeLink
+          image {
+            childImageSharp {
+              fluid(maxWidth: 850, maxHeight: 571, quality: 100) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Wrapper>
+      <TitleWrapper>
+        <ProjectTitle>My projects</ProjectTitle>
+      </TitleWrapper>
+      <ProjectsWrapper>
+        {allProjectsJson.nodes.map(
+          ({ title, description, demoLink, codeLink, image }) => (
+            <Project
+              key={title}
+              title={title}
+              description={description}
+              demoLink={demoLink}
+              codeLink={codeLink}
+              image={image.childImageSharp.fluid}
+            />
+          )
+        )}
+      </ProjectsWrapper>
+    </Wrapper>
+  )
+}
+
+export default Projects

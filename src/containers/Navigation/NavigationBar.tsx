@@ -8,7 +8,7 @@ const ToolbarWrapper = styled.div`
   display: flex;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 20;
   width: 100%;
   height: 10vh;
   align-items: center;
@@ -20,18 +20,14 @@ const HamburgerWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem 2rem 0rem 0rem;
-  width: 4.5rem;
-  height: 4.5rem;
-  // border-radius: 50%;
-  // background-color: ${({ theme }) => theme.colors.white};
+  width: 5.5rem;
+  height: 5.5rem;
 `
 
 const LogoWrapper = styled.div`
+  display: flex;
   width: 7.5rem;
   height: 7.5rem;
-  margin-top: 3rem;
-  display: flex;
   justify-content: center;
   align-items: center;
 `

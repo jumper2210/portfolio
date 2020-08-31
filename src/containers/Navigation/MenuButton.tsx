@@ -1,39 +1,72 @@
-import React from "react"
-import styled from "styled-components"
+import React, { useContext } from "react"
+import styled, { css } from "styled-components"
+import { NavigationContext } from "../../context/NavigationContext"
 
-const Button = styled.button`
-  position: fixed;
-  z-index: 2;
+interface Props {
+  readonly isActive: boolean
+}
+
+const Button = styled.button<Props>`
   background-color: transparent;
+  ${({ isActive }) =>
+    isActive &&
+    css`
+      & > ${SVG} ${LineTop} {
+        stroke-dashoffset: -98px;
+      }
+      & > ${SVG} ${LineBottom} {
+        stroke-dashoffset: -138px;
+      }
+    `}
 `
 const SVG = styled.svg`
   cursor: pointer;
   user-select: none;
-  // background-color: ${({ theme }) => theme.colors.color_secondary};
   background-color: transparent;
-  `
+  transition: transform 0.4s;
+`
 const Line = styled.path`
   fill: none;
   stroke: ${({ theme }) => theme.colors.color_secondary};
-  stroke-width: 5.5;
+  stroke-width: 6;
   stroke-linecap: round;
+  transition: stroke-dasharray 3000ms, stroke-dashoffset 3000ms;
 `
 
 const LineTop = styled(Line)`
-  stroke-dasharray: 40 139;
+  stroke-dasharray: 40 150;
 `
 
 const LineBottom = styled(Line)`
-  stroke-dasharray: 40 180;
+  stroke-dasharray: 40 150;
 `
 
 const MenuButton = () => {
+  const { isNavVisible, navHandler } = useContext(NavigationContext)
+
+  const toggleNav = () => {
+    navHandler(!isNavVisible)
+  }
+
   return (
-    <Button>
+    <Button onClick={toggleNav} isActive={isNavVisible}>
       <SVG viewBox="0 0 100 100" width="65">
-        <LineTop d="m 30,41 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
-        <Line d="m 30,55 h 40" />
-        <LineBottom d="m 30,69 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+        <LineTop
+          d="
+        m 30,41 
+        h 40
+        "
+        />
+        <Line
+          d="
+        m 30,55
+        h 40"
+        />
+        <LineBottom
+          d="
+        m 30,69
+        h 40"
+        />
       </SVG>
     </Button>
   )

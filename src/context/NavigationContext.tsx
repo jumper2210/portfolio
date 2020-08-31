@@ -1,16 +1,31 @@
-import React, { createContext, ReactNode } from "react"
-import GlobalStyle from "../theme/GlobalStyle"
+import React, { useState, createContext, ReactNode } from "react"
 
 interface Props {
   children: ReactNode
 }
-interface ContextProps {}
-export const NavigationContext = createContext<ContextProps>({})
+interface ContextProps {
+  isNavVisible: boolean
+  navHandler: (isVisible: boolean) => void
+}
+export const NavigationContext = createContext<ContextProps>({
+  isNavVisible: false,
+  navHandler: () => null,
+})
+
 const NavigationProvider = ({ children }: Props) => {
-  const context = {}
+  const [isNavVisible, setIsNavVisible] = useState(false)
+  const navHandler = (isVisible: boolean) => {
+    setIsNavVisible(isVisible)
+
+    // if (isVisible) document.body.style.overflow = "hidden"
+    // else document.body.style.overflow = "auto"
+  }
+  const context = {
+    isNavVisible,
+    navHandler,
+  }
   return (
     <NavigationContext.Provider value={context}>
-      <GlobalStyle />
       {children}
     </NavigationContext.Provider>
   )
