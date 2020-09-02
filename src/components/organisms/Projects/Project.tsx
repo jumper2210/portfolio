@@ -1,8 +1,15 @@
 import React from "react"
 import styled from "styled-components"
 import Image, { FluidObject } from "gatsby-image"
-import Button from "../../atoms/CustomButton"
+import Button from "../../atoms/CustomButton/CustomButton"
 
+interface Props {
+  title: string
+  description: string
+  demoLink: string
+  codeLink: string
+  image: FluidObject
+}
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -34,14 +41,6 @@ const ProjectDescription = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.subFont};
 `
-
-interface Props {
-  title: string
-  description: string
-  demoLink: string
-  codeLink: string
-  image: FluidObject
-}
 
 const Project = ({ title, description, demoLink, codeLink, image }: Props) => {
   return (

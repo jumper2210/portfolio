@@ -1,6 +1,6 @@
 import React, { useRef } from "react"
 import styled from "styled-components"
-import Button from "../../atoms/CustomButton"
+import Button from "../../atoms/CustomButton/CustomButton"
 
 const MainWrapper = styled.section`
   width: 100%;

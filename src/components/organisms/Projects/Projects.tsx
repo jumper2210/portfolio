@@ -4,22 +4,6 @@ import { FluidObject } from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 
-const Wrapper = styled.section`
-  background-color: ${({ theme }) => theme.colors.color_primary};
-`
-
-const TitleWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
-
-const ProjectsSectionTitle = styled.h3`
-  color: ${({ theme }) => theme.colors.white};
-`
-const ProjectsWrapper = styled.div`
-  display: grid;
-`
 interface QueryProjectProps {
   allProjectsJson: {
     nodes: [
@@ -37,11 +21,28 @@ interface QueryProjectProps {
     ]
   }
 }
+const Wrapper = styled.section`
+  background-color: ${({ theme }) => theme.colors.color_primary};
+`
+
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const ProjectsSectionTitle = styled.h3`
+  color: ${({ theme }) => theme.colors.white};
+`
+const ProjectsWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const Projects = () => {
   const { allProjectsJson } = useStaticQuery<QueryProjectProps>(graphql`
     {
-      allProjectsJson {
+      allProjectsJson(sort: { fields: order }) {
         nodes {
           title
           description

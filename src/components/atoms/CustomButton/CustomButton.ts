@@ -7,7 +7,7 @@ const Button = styled.button`
   border-radius: 1rem;
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.xs};
-  background: ${({ theme }) => theme.colors.button};
+  background: ${({ theme }) => theme.colors.color_secondary};
 `
 
 export default Button
