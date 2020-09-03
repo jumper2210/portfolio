@@ -22,11 +22,12 @@ const Wrapper = styled.div`
   position: relative;
   top: 0;
   left: 0;
+  margin-top: 10rem;
   flex-direction: column;
   padding: 5rem 0;
-  border-radius: 2rem;
-  background: ${({ theme }) => theme.colors.color_secondary};
-  margin-top: 10rem;
+  border-radius: 2.5rem;
+  box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.81);
+  background: ${({ theme }) => theme.colors.color_primary};
 `
 const Name = styled.h5`
   font-size: ${({ theme }) => theme.fontSize.xl};

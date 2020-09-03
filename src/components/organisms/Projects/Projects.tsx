@@ -34,7 +34,7 @@ const TitleWrapper = styled.div`
 const ProjectsSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
 `
-const ProjectsWrapper = styled.div`
+const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
 `
@@ -65,7 +65,7 @@ const Projects = () => {
       <TitleWrapper>
         <ProjectsSectionTitle>My projects</ProjectsSectionTitle>
       </TitleWrapper>
-      <ProjectsWrapper>
+      <InnerWrapper>
         {allProjectsJson.nodes.map(
           ({ title, description, demoLink, codeLink, image }) => (
             <Project
@@ -78,7 +78,7 @@ const Projects = () => {
             />
           )
         )}
-      </ProjectsWrapper>
+      </InnerWrapper>
     </Wrapper>
   )
 }

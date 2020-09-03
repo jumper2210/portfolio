@@ -1,6 +1,10 @@
 import styled from "styled-components"
 
-const Button = styled.button`
+interface Props {
+  readonly isSubmitting?: boolean
+}
+
+const Button = styled.button<Props>`
   text-decoration: none;
   text-transform: uppercase;
   padding: 1rem;

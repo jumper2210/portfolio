@@ -13,9 +13,12 @@ interface Props {
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 2rem;
+  padding: 1rem;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.51);
+  border-radius: 2rem;
+  margin: 2rem;
 `
 
 const ButtonsWrapper = styled.div`

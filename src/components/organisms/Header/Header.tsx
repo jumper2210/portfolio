@@ -2,7 +2,7 @@ import React, { useRef } from "react"
 import styled from "styled-components"
 import Button from "../../atoms/CustomButton/CustomButton"
 
-const MainWrapper = styled.section`
+const Wrapper = styled.section`
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.color_primary};
@@ -49,7 +49,7 @@ const Header = () => {
   // }, [])
 
   return (
-    <MainWrapper>
+    <Wrapper>
       <TextMainWrapper>
         <MainTitle>Krzysztof Skoczek</MainTitle>
         <SubTitle>Front-End React Developer</SubTitle>
@@ -57,7 +57,7 @@ const Header = () => {
       <ButtonWrapper>
         <Button>see my work</Button>
       </ButtonWrapper>
-    </MainWrapper>
+    </Wrapper>
   )
 }
 

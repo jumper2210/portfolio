@@ -3,7 +3,7 @@ import styled from "styled-components"
 import MenuButton from "./MenuButton"
 import Logo from "../../components/organisms/Logo/Logo"
 
-const ToolbarWrapper = styled.div`
+const Wrapper = styled.div`
   position: fixed;
   display: flex;
   top: 0;
@@ -34,14 +34,14 @@ const LogoWrapper = styled.div`
 
 const NavigationBar = () => {
   return (
-    <ToolbarWrapper>
+    <Wrapper>
       <LogoWrapper>
         <Logo />
       </LogoWrapper>
       <HamburgerWrapper>
         <MenuButton />
       </HamburgerWrapper>
-    </ToolbarWrapper>
+    </Wrapper>
   )
 }
 
