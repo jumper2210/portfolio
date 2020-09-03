@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import MenuButton from "./MenuButton"
-import Logo from "../../components/organisms/Logo/Logo"
+import Logo from "../Logo/Logo"
 
 const Wrapper = styled.div`
   position: fixed;
