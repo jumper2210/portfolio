@@ -5,24 +5,28 @@ interface Props {
 }
 interface ContextProps {
   isNavVisible: boolean
-  navHandler: (isVisible: boolean) => void
+  isTransparent: boolean
+  popInNavHandler: (isVisible: boolean) => void
 }
 export const NavigationContext = createContext<ContextProps>({
   isNavVisible: false,
-  navHandler: () => null,
+  isTransparent: true,
+  popInNavHandler: () => null,
 })
 
 const NavigationProvider = ({ children }: Props) => {
   const [isNavVisible, setIsNavVisible] = useState(false)
-  const navHandler = (isVisible: boolean) => {
-    setIsNavVisible(isVisible)
+  const [isTransparent, setIsTransparent] = useState(true)
 
-    // if (isVisible) document.body.style.overflow = "hidden"
-    // else document.body.style.overflow = "auto"
+  const popInNavHandler = (isVisible: boolean) => {
+    setIsNavVisible(isVisible)
+    if (isVisible) document.body.style.overflow = "hidden"
+    else document.body.style.overflow = "auto"
   }
   const context = {
     isNavVisible,
-    navHandler,
+    isTransparent,
+    popInNavHandler,
   }
   return (
     <NavigationContext.Provider value={context}>

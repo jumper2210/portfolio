@@ -8,15 +8,17 @@ interface Props {
 
 const StyledBurger = styled.button<Props>`
   display: flex;
+  position: absolute;
+  top: 25%;
+  left: 70%;
   flex-direction: column;
   justify-content: space-around;
   width: 3rem;
   height: 2.9rem;
-  margin: 0.5rem 1rem 0 0;
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0;
+
   z-index: 10;
   &:focus {
     outline: none;
@@ -49,9 +51,9 @@ const StyledBurger = styled.button<Props>`
 `
 
 const MenuButton = () => {
-  const { isNavVisible, navHandler } = useContext(NavigationContext)
+  const { isNavVisible, popInNavHandler } = useContext(NavigationContext)
   const toggleNav = () => {
-    navHandler(!isNavVisible)
+    popInNavHandler(!isNavVisible)
   }
   return (
     <StyledBurger onClick={toggleNav} isActive={isNavVisible}>
