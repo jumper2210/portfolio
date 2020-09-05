@@ -30,7 +30,7 @@ const TitleWrapper = styled.div`
 
 const Contact = () => {
   return (
-    <Wrapper>
+    <Wrapper id="contact">
       <InnerWrapper>
         <TitleWrapper>
           <Title>Let's make some business</Title>

@@ -9,11 +9,11 @@ const Wrapper = styled.section`
   padding: 3rem 0;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.white};
-  border-top: 1px solid ${({ theme }) => theme.colors.color_secondary};
+  border-top: 2px solid ${({ theme }) => theme.colors.color_secondary};
 `
 
 const Footer = () => {
-  return <Wrapper>@krzysztof skoczek</Wrapper>
+  return <Wrapper id="footer">@krzysztof skoczek</Wrapper>
 }
 
 export default Footer

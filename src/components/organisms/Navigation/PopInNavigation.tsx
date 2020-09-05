@@ -9,7 +9,9 @@ const Wrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   z-index: 20;
   ${({ theme }) => theme.mq.md} {
     display: none;
@@ -36,7 +38,7 @@ const Content = styled.div`
 
 const ListWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -87,10 +89,12 @@ const PopInNavigation = () => {
         reversed: true,
       })
       tl.set(content, { visibility: "visible" })
-      tl.to(background, { scale: 9, duration: 0.4, ease: "Circ.easeOut" })
+
+      tl.to(background, { scale: 7, duration: 0.4, ease: "expo.out", y: -100 })
+
       tl.addLabel("showItems")
 
-      tl.from(listItems, { x: -50, autoAlpha: 0, stagger: 0.1 }, "showItems")
+      tl.from(listItems, { x: -44, autoAlpha: 0, stagger: 0.2 }, "showItems")
     }
   }, [])
 

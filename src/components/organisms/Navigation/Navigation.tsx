@@ -12,20 +12,20 @@ interface Props {
 
 const Wrapper = styled.nav<Props>`
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 20;
   width: 100%;
   height: 10vh;
+  transition: 0.6s;
   background: ${({ theme }) => theme.colors.color_primary};
   ${({ theme }) => theme.mq.md} {
     ${({ isActive }) =>
       isActive &&
       css`
-        position: fixed;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
       `}
   }
 `
@@ -35,7 +35,7 @@ const InnerWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  color: ${({ theme }) => theme.white};
+  color: ${({ theme }) => theme.colors.white};
 `
 const List = styled.ul`
   display: none;
@@ -51,6 +51,7 @@ const LogoWrapper = styled.div`
   height: 6.2rem;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5rem;
 `
 
 const Navigation = () => {
@@ -64,9 +65,9 @@ const Navigation = () => {
       gsap.to(list, { autoAlpha: 1 })
       gsap.fromTo(
         listItems,
-        { y: -50, autoAlpha: 0 },
+        { x: -50, autoAlpha: 0 },
         {
-          y: 0,
+          x: 0,
           autoAlpha: 1,
           stagger: 0.1,
           ease: "power3.inOut",

@@ -25,12 +25,10 @@ const Wrapper = styled.section`
   padding: 10rem 0;
   justify-content: center;
   align-items: center;
-
 `
 const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  // width: 75%;
   padding: 0 3rem;
 `
 
@@ -53,7 +51,7 @@ const Technologies = () => {
   `)
 
   return (
-    <Wrapper>
+    <Wrapper id="technologies">
       <InnerWrapper>
         {allTechnologyCardsJson.nodes.map(
           ({ title, description, technologies }) => (

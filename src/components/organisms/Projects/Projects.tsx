@@ -61,7 +61,7 @@ const Projects = () => {
   `)
 
   return (
-    <Wrapper>
+    <Wrapper id="projects">
       <TitleWrapper>
         <ProjectsSectionTitle>My projects</ProjectsSectionTitle>
       </TitleWrapper>

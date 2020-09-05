@@ -49,7 +49,7 @@ const Header = () => {
   // }, [])
 
   return (
-    <Wrapper>
+    <Wrapper id="home">
       <TextMainWrapper>
         <MainTitle>Krzysztof Skoczek</MainTitle>
         <SubTitle>Front-End React Developer</SubTitle>
