@@ -1,8 +1,8 @@
 {
-  "order": 1,
-  "title": "JG-Photography",
-  "description": "Business card website made for Justyna Garbal Photography",
-  "codeLink": "https://github.com/jumper2210/jg-photography",
-  "demoLink": "http://jg-photography.pl/",
-  "image": "../../assets/images/jg-photography.png"
+    "order": 2,
+    "title": "JG-Photography",
+    "description": "Business card website made for Justyna Garbal Photography",
+    "codeLink": "https://github.com/jumper2210/jg-photography",
+    "demoLink": "http://jg-photography.pl/",
+    "image": "../../assets/images/jg-photography.png"
 }

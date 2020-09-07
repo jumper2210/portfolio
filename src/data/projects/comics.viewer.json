@@ -1,8 +1,7 @@
 {
-  "order": 6,
-  "title": "Comics-viewer",
-  "description": "Business card website made for Justyna Garbal Photography",
-  "codeLink": "https://github.com/jumper2210/jg-photography",
-  "demoLink": "http://jg-photography.pl/",
-  "image": "../../assets/images/jg-photography.png"
+    "order": 6,
+    "title": "Mobile comics viewer",
+    "description": "Made with React-native. This project aims to download and browse the comics made available by xkcd api",
+    "demoLink": "http://jg-photography.pl/",
+    "image": "../../assets/images/comics_viewer.png"
 }

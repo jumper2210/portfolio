@@ -1,33 +1,35 @@
-import React, { useRef } from "react"
+import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import Button from "../../atoms/CustomButton/CustomButton"
+import gsap from "gsap"
 
 const Wrapper = styled.section`
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.colors.color_primary};
 `
-const TextMainWrapper = styled.div`
+const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: absolute;
   width: 100%;
-  top: 50%;
+  top: 30%;
   left: 0;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
+  text-align: center;
 `
 const MainTitle = styled.h2`
   color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.xlg};
+  font-size: ${({ theme }) => theme.fontSize.xxlm};
   font-family: ${({ theme }) => theme.fonts.subFont};
-  text-transform: uppercase;
 `
-const SubTitle = styled.h3`
+const SubTitle = styled.h2`
   color: ${({ theme }) => theme.colors.grey};
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.xl};
   font-family: ${({ theme }) => theme.fonts.subFont};
-  text-transform: uppercase;
+  margin-top: 5rem;
 `
 const ButtonWrapper = styled.div`
   position: relative;
@@ -39,23 +41,43 @@ const ButtonWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
 `
+const StyledButton = styled(Button)`
+  padding: 1.5rem;
+`
 
 const Header = () => {
-  const titleRef = useRef<HTMLHeadingElement>(null)
+  const mainTitleRef = useRef<HTMLHeadingElement>(null)
   const subTitleRef = useRef<HTMLHeadingElement>(null)
 
-  // useEffect(() => {
+  useEffect(() => {
+    const mainTitle = mainTitleRef.current
+    const subTitle = subTitleRef.current
 
-  // }, [])
+    if (mainTitle && subTitle) {
+      const tl = gsap.timeline({
+        defaults: { ease: "Power3.easeOut" },
+      })
+
+      tl.addLabel("start")
+
+      tl.from(mainTitle, { autoAlpha: 0, x: "+=20", delay: 1, duration: 1 })
+
+      tl.from(
+        subTitle,
+        { autoAlpha: 0, y: "+=50", delay: 2, duration: 1 },
+        "start"
+      )
+    }
+  }, [])
 
   return (
-    <Wrapper id="home">
-      <TextMainWrapper>
-        <MainTitle>Krzysztof Skoczek</MainTitle>
-        <SubTitle>Front-End React Developer</SubTitle>
-      </TextMainWrapper>
+    <Wrapper>
+      <InnerWrapper>
+        <MainTitle ref={mainTitleRef}>Krzysztof Skoczek</MainTitle>
+        <SubTitle ref={subTitleRef}>Front-end / React Developer</SubTitle>
+      </InnerWrapper>
       <ButtonWrapper>
-        <Button>see my work</Button>
+        <StyledButton>see my work</StyledButton>
       </ButtonWrapper>
     </Wrapper>
   )

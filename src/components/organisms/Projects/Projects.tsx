@@ -29,10 +29,13 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 8rem 0;
 `
 
 const ProjectsSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  text-transform: uppercase;
 `
 const InnerWrapper = styled.div`
   display: flex;
@@ -50,7 +53,7 @@ const Projects = () => {
           codeLink
           image {
             childImageSharp {
-              fluid(maxWidth: 850, maxHeight: 571, quality: 100) {
+              fluid(maxWidth: 880, maxHeight: 591, quality: 100) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }

@@ -1,8 +1,8 @@
 {
-  "order": 2,
-  "title": "Netflix-clone",
-  "description": "Front-End netflix-clone",
-  "codeLink": "https://github.com/jumper2210/netflix-clone",
-  "demoLink": "https://netflix-clone-c3e1c.web.app/",
-  "image": "../../assets/images/netflix-clone.png"
+    "order": 1,
+    "title": "Netflix-clone",
+    "description": "Front-End netflix-clone",
+    "codeLink": "https://github.com/jumper2210/netflix-clone",
+    "demoLink": "https://netflix-clone-c3e1c.web.app/",
+    "image": "../../assets/images/netflix-clone.png"
 }

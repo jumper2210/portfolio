@@ -39,7 +39,6 @@ export const theme = {
     xl: "2.8rem",
     xxlm: "3.6rem",
     xxl: "4.8rem",
-    xxxl: "8.6rem",
   },
   mq: Object.keys(breakpoints).reduce<Record<string, string>>(
     (acc, breakpoint) => {

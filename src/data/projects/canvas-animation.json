@@ -1,9 +1,9 @@
 {
     "order": 7,
     "title": "canvas-animation",
-    "description": "Business card website made for Justyna Garbal Photography",
+    "description": "Simply canvas animation",
     "demoLink": "http://jg-photography.pl/",
     "codeLink": "https://github.com/jumper2210/jg-photography",
-    "image": "../../assets/images/jg-photography.png",
+    "image": "../../assets/images/canvas.png"
 
 }
