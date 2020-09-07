@@ -19,17 +19,28 @@ interface QueryProps {
     ]
   }
 }
+
 const Wrapper = styled.section`
-  display: flex;
   background-color: ${({ theme }) => theme.colors.color_primary};
-  padding: 10rem 0;
+`
+
+const TitleWrapper = styled.div`
+  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 9rem 0rem 5rem 0rem;
 `
+
 const InnerWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 0 3rem;
+  flex-wrap: wrap;
+`
+const TechnologiesSectionTitle = styled.h3`
+  color: ${({ theme }) => theme.colors.white};
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  text-transform: uppercase;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 `
 
 const Technologies = () => {
@@ -52,6 +63,9 @@ const Technologies = () => {
 
   return (
     <Wrapper id="technologies">
+      <TitleWrapper>
+        <TechnologiesSectionTitle>How I work</TechnologiesSectionTitle>
+      </TitleWrapper>
       <InnerWrapper>
         {allTechnologyCardsJson.nodes.map(
           ({ title, description, technologies }) => (

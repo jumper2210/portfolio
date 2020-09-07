@@ -17,36 +17,46 @@ interface IconProps {
 }
 
 const Wrapper = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
-  position: relative;
-  top: 0;
-  left: 0;
-  margin-top: 10rem;
+  align-items: center;
   flex-direction: column;
-  padding: 5rem 0;
+  padding: 1rem;
   border-radius: 2.5rem;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.81);
   background: ${({ theme }) => theme.colors.color_primary};
+  margin: 2rem;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    bottom: 0;
+    left: 0;
+    background: ${({ theme }) => theme.colors.color_secondary};
+    width: 100%;
+    height: 4rem;
+    position: absolute;
+    z-index: 10;
+  }
 `
 const Name = styled.h5`
-  font-size: ${({ theme }) => theme.fontSize.xl};
+  font-size: ${({ theme }) => theme.fontSize.m};
   font-family: ${({ theme }) => theme.fonts.subFont};
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
-  color: ${({ theme }) => theme.colors.grey};
+  color: ${({ theme }) => theme.colors.white};
 `
 
 const NameWrapper = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 5rem;
+  position: relative;
   top: 0;
-  left: 0;
+  transform: translateY(-9px);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: ${({ theme }) => theme.colors.color_white};
-  z-index: 3;
+  width: 110%;
+  height: 4rem;
+  background-color: ${({ theme }) => theme.colors.color_secondary};
 `
 
 const Description = styled.p`
@@ -54,25 +64,24 @@ const Description = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-weight: ${({ theme }) => theme.fontWeight.light};
   font-family: ${({ theme }) => theme.fonts.subFont};
+  padding: 3rem 0rem 7rem 0rem;
 `
 
 const Technologies = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 0 10px;
-  padding: 20px 0;
 `
 const Technology = styled.li<IconProps>`
   display: flex;
   align-items: center;
+  justify-content: space-around;
   font-size: ${({ theme }) => theme.fontSize.m};
-  margin: 7px 0;
-  white-space: pre;
+  padding: 2rem;
   color: ${({ theme }) => theme.colors.white};
 `
-const Img = styled.img`
-  width: 15%;
-  height: 15%;
+const Icon = styled.img`
+  width: 20%;
+  height: 30%;
   object-fit: cover;
 `
 const TechnologyCard = ({ title, description, technologies }: Props) => {
@@ -85,7 +94,7 @@ const TechnologyCard = ({ title, description, technologies }: Props) => {
         {technologies.map(({ icon, name }) => (
           <Technology key={name} icon={icon.publicURL}>
             {name}
-            <Img src={icon.publicURL} />
+            <Icon src={icon.publicURL} />
           </Technology>
         ))}
       </Technologies>

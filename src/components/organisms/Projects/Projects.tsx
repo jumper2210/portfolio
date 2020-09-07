@@ -3,6 +3,8 @@ import Project from "./Project"
 import { FluidObject } from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+// @ts-ignore
+import Fade from "react-reveal/Fade"
 
 interface QueryProjectProps {
   allProjectsJson: {
@@ -29,13 +31,14 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8rem 0;
+  padding: 5rem 0;
 `
 
 const ProjectsSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.xl};
   text-transform: uppercase;
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 `
 const InnerWrapper = styled.div`
   display: flex;
@@ -53,7 +56,7 @@ const Projects = () => {
           codeLink
           image {
             childImageSharp {
-              fluid(maxWidth: 880, maxHeight: 591, quality: 100) {
+              fluid(maxWidth: 880, maxHeight: 581, quality: 100) {
                 ...GatsbyImageSharpFluid_tracedSVG
               }
             }
@@ -71,14 +74,16 @@ const Projects = () => {
       <InnerWrapper>
         {allProjectsJson.nodes.map(
           ({ title, description, demoLink, codeLink, image }) => (
-            <Project
-              key={title}
-              title={title}
-              description={description}
-              demoLink={demoLink}
-              codeLink={codeLink}
-              image={image.childImageSharp.fluid}
-            />
+            <Fade left>
+              <Project
+                key={title}
+                title={title}
+                description={description}
+                demoLink={demoLink}
+                codeLink={codeLink}
+                image={image.childImageSharp.fluid}
+              />
+            </Fade>
           )
         )}
       </InnerWrapper>
