@@ -19,13 +19,17 @@ const StyledButton = styled(Button)`
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
   justify-content: center;
+  padding: 1.5rem;
   align-items: center;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.51);
-  border-radius: 2rem;
+  border-radius: 2.2rem;
   margin: 3rem;
   gap: 4.5rem;
+  ${({ theme }) => theme.mq.md} {
+    padding: 7rem;
+    margin: 5.6rem;
+  }
 `
 
 const ButtonsWrapper = styled.div`
@@ -48,6 +52,9 @@ const ProjectDescription = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.subFont};
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  ${({ theme }) => theme.mq.md} {
+    line-height: 2.5rem;
+  }
 `
 
 const Project = ({ title, description, demoLink, codeLink, image }: Props) => {

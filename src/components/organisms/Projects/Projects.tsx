@@ -25,6 +25,7 @@ interface QueryProjectProps {
 }
 const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.color_primary};
+  padding: 10rem 0;
 `
 
 const TitleWrapper = styled.div`
@@ -41,8 +42,12 @@ const ProjectsSectionTitle = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeight.bold};
 `
 const InnerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  ${({ theme }) => theme.mq.md} {
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-gap 0.5rem;
+  }
 `
 
 const Projects = () => {
