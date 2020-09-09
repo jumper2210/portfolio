@@ -2,7 +2,7 @@
 ![portfolio](https://user-images.githubusercontent.com/47790273/92597518-cbbf6600-f2a7-11ea-9310-3676c36f2e81.png)
 
 ## Info
-My own Portfolio shows my design skills and preference. I wrote this project with Gatsby Type Script.
+My own Portfolio shows my design skills and preference. I wrote this project with Gatsby and Type Script.
 
 ### Technologies
 - Gatsby
@@ -19,3 +19,4 @@ My own Portfolio shows my design skills and preference. I wrote this project wit
 Krzysztof Skoczek
 
 #### Credits
+Icons: flaticon.com 
