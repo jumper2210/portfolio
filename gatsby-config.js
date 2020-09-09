@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Front End Developer | Portfolio`,
-    description: `It's Portfolio made with Gatsby and TypeScript by Krzysztof Skoczek - Front End/React Developer.`,
+    title: `Krzysztof Skoczek | Portfolio`,
+    description: `It's Portfolio made with Gatsby and TypeScript by Krzysztof Skoczek - Front End | React Developer.`,
     author: `@jumper2210`,
   },
   plugins: [
