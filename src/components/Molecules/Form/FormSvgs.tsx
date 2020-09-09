@@ -14,16 +14,19 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2rem;
 `
 
 const Icon = styled.a<IconProps>`
   display: block;
-  background-size: 10%;
+  background-size: 20%;
   background: url(${({ icon }) => icon}) no-repeat center;
   cursor: pointer;
   width: 4rem;
   height: 4rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
+  object-fit: cover;
+  border-radius: 1rem;
   &:last-of-type {
     margin: 0;
   }

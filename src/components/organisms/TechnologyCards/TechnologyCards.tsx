@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import TechnologyCard from "./TechnologyCard"
 import { useStaticQuery, graphql } from "gatsby"
+// @ts-ignore
+import Fade from "react-reveal/Fade"
 
 interface QueryProps {
   allTechnologyCardsJson: {
@@ -69,12 +71,14 @@ const Technologies = () => {
       <InnerWrapper>
         {allTechnologyCardsJson.nodes.map(
           ({ title, description, technologies }) => (
-            <TechnologyCard
-              key={title}
-              title={title}
-              description={description}
-              technologies={technologies}
-            />
+            <Fade right>
+              <TechnologyCard
+                key={title}
+                title={title}
+                description={description}
+                technologies={technologies}
+              />
+            </Fade>
           )
         )}
       </InnerWrapper>

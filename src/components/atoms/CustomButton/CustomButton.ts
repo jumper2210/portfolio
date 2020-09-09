@@ -12,6 +12,7 @@ const Button = styled.button<Props>`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.s};
   background: ${({ theme }) => theme.colors.color_secondary};
+  cursor: pointer;
 `
 
 export default Button

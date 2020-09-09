@@ -11,7 +11,6 @@ const Wrapper = styled.section`
 const InnerWrapper = styled.div`
   display: grid;
   justify-content: center;
-
   align-items: center;
   border-radius: 2rem;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.51);
@@ -21,7 +20,8 @@ const Title = styled.h4`
   color: ${({ theme }) => theme.colors.white};
   text-transform: uppercase;
   font-family: ${({ theme }) => theme.fonts.subFont};
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.m};
+  text-align: center;
 `
 const TitleWrapper = styled.div`
   width: 100%;
@@ -33,9 +33,12 @@ const Contact = () => {
     <Wrapper id="contact">
       <InnerWrapper>
         <TitleWrapper>
-          <Title>Let's make some business</Title>
+          <Title>Find me on social media</Title>
         </TitleWrapper>
         <FromSvgs />
+        <TitleWrapper>
+          <Title>Or write a message</Title>
+        </TitleWrapper>
         <FormSchema />
       </InnerWrapper>
     </Wrapper>
