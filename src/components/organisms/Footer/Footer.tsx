@@ -13,7 +13,7 @@ const Wrapper = styled.section`
 `
 
 const Footer = () => {
-  return <Wrapper id="footer">@krzysztof skoczek</Wrapper>
+  return <Wrapper id="footer">@Created by krzysztof skoczek</Wrapper>
 }
 
 export default Footer

@@ -18,18 +18,17 @@ const StyledButton = styled(Button)`
 
 const Wrapper = styled.div`
   display: flex;
+  position: relative;
+  top: 0;
+  left: 0;
   flex-direction: column;
   justify-content: center;
-  padding: 1.5rem;
   align-items: center;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.51);
   border-radius: 2.2rem;
+  padding: 1.5rem;
   margin: 3rem;
   gap: 4.5rem;
-  ${({ theme }) => theme.mq.md} {
-    padding: 7rem;
-    margin: 5.6rem;
-  }
 `
 
 const ButtonsWrapper = styled.div`
@@ -40,6 +39,7 @@ const ButtonsWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
+  position: relative;
 `
 const ProjectTitle = styled.h4`
   color: ${({ theme }) => theme.colors.white};
@@ -52,6 +52,7 @@ const ProjectDescription = styled.p`
   color: ${({ theme }) => theme.colors.white};
   font-family: ${({ theme }) => theme.fonts.subFont};
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
+  text-align: center;
   ${({ theme }) => theme.mq.md} {
     line-height: 2.5rem;
   }

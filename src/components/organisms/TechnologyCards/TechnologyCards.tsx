@@ -31,12 +31,17 @@ const TitleWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 9rem 0rem 5rem 0rem;
+  ${({ theme }) => theme.mq.md} {
+    padding: 3rem 0rem 3rem 0rem;
+  }
 `
 
 const InnerWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  ${({ theme }) => theme.mq.md} {
+    grid-template-columns: 0.5fr 0.5fr;
+    padding: 10rem;
+  }
 `
 const TechnologiesSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};

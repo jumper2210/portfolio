@@ -42,13 +42,14 @@ const Label = styled.label<LabelProps>`
 
 const StyledInput = styled.input<InputProps>`
   width: 100%;
-  padding: 15px 30px;
+  padding: 1.5rem 3rem;
   background: ${({ theme }) => theme.colors.color_primary};
   border: 2px solid ${({ theme }) => theme.colors.color_secondary};
   color: ${({ theme }) => theme.colors.white};
   border-radius: 0.4rem;
-  padding-left: 1.5rem;
   resize: none;
+  ${({ theme }) => theme.mq.md} {
+  }
 `
 
 const FormInput = ({

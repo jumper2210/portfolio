@@ -26,6 +26,9 @@ interface QueryProjectProps {
 const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.color_primary};
   padding: 10rem 0;
+  ${({ theme }) => theme.mq.md} {
+    padding: 3rem 0;
+  }
 `
 
 const TitleWrapper = styled.div`
@@ -46,7 +49,8 @@ const InnerWrapper = styled.div`
   grid-template-columns: 1fr;
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: 0.5fr 0.5fr;
-    grid-gap 0.5rem;
+    grid-gap .5rem;
+    padding: 15rem;
   }
 `
 

@@ -1,8 +1,8 @@
 {
-    "order": 5,
-    "title": "Space-sandwich",
-    "description": "E-commerce sandwich shop, made with React.js and Spring",
-    "codeLink": "https://github.com/jumper2210/jg-photography",
-    "demoLink": "http://jg-photography.pl/",
-    "image": "../../assets/images/space-sandwich.png"
+  "order": 5,
+  "title": "Space-sandwich",
+  "description": "My first bigger React.js project. E-commerce sandwich shop, made with React.js and Spring",
+  "codeLink": "https://github.com/jumper2210/space_sandwich",
+  "demoLink": "",
+  "image": "../../assets/images/space-sandwich.png"
 }

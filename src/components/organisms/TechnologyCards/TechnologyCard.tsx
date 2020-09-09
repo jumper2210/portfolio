@@ -23,10 +23,10 @@ const Wrapper = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 1rem;
+  margin: 2rem;
   border-radius: 2.5rem;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.81);
   background: ${({ theme }) => theme.colors.color_primary};
-  margin: 2rem;
   overflow: hidden;
 
   &:before {
@@ -70,6 +70,9 @@ const Description = styled.p`
 const Technologies = styled.ul`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
+  ${({ theme }) => theme.mq.md} {
+    grid-template-columns: 0.5fr 0.5fr;
+  }
 `
 const Technology = styled.li<IconProps>`
   display: flex;
@@ -82,7 +85,7 @@ const Technology = styled.li<IconProps>`
 const Icon = styled.img`
   width: 20%;
   height: 30%;
-  object-fit: cover;
+  object-fit: contain;
 `
 const TechnologyCard = ({ title, description, technologies }: Props) => {
   return (

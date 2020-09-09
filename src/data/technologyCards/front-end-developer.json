@@ -1,14 +1,18 @@
 {
-    "order": 1,
-    "title": "As Front End Developer",
-    "description": "I feel very good writing in React. Every day I try to browse new trends on awwwards or behavior pages to improve my skills in UI and UX. Recently I also started learning Gatsby and type script to make my code more readable and better for debugging. ",
-    "technologies": [
-        { "name": "React", "icon": "../../assets/icons/react.svg" },
-        { "name": "Gatsby", "icon": "../../assets/icons/gatsby.svg" },
-        { "name": "GraphQL", "icon": "../../assets/icons/graphql.svg" },
-        { "name": "GSAP", "icon": "../../assets/icons/gsap.svg" },
-        { "name": "Typescript", "icon": "../../assets/icons/typescript.svg" },
-        { "name": "Sass", "icon": "../../assets/icons/sass.svg" },
-        { "name": "Css", "icon": "../../assets/icons/css3.svg" }
-    ]
+  "order": 1,
+  "title": "As Front End Developer",
+  "description": "I feel very good writing in React. Every day I try to browse new trends on awwwards or behavior pages to improve my skills in UI and UX. Recently I also started learning Gatsby and type script to make my code more readable and better for debugging. ",
+  "technologies": [
+    { "name": "React", "icon": "../../assets/icons/react.svg" },
+    {
+      "name": "Redux",
+      "icon": "../../assets/icons/redux.svg"
+    },
+    { "name": "Gatsby", "icon": "../../assets/icons/gatsby.svg" },
+    { "name": "GraphQL", "icon": "../../assets/icons/graphql.svg" },
+    { "name": "GSAP", "icon": "../../assets/icons/gsap.svg" },
+    { "name": "Typescript", "icon": "../../assets/icons/typescript.svg" },
+    { "name": "Sass", "icon": "../../assets/icons/sass.svg" },
+    { "name": "Css", "icon": "../../assets/icons/css3.svg" }
+  ]
 }

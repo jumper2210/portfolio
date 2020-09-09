@@ -1,8 +1,8 @@
 {
-    "order": 3,
-    "title": "Easymed",
-    "description": "An mobile application aimed at improving mobile communication between the doctor and the patient, which has been severely affected by an ongoing pandemic. The application is dedicated to a private medical clinic.",
-    "codeLink": "https://github.com/jumper2210/jg-photography",
-    "demoLink": "http://jg-photography.pl/",
-    "image": "../../assets/images/easy-med.png"
+  "order": 3,
+  "title": "Easymed",
+  "description": "An mobile application aimed at improving mobile communication between the doctor and the patient, which has been severely affected by an ongoing pandemic.",
+  "codeLink": "https://github.com/jumper2210/easymed",
+  "demoLink": "",
+  "image": "../../assets/images/easy-med.png"
 }

@@ -1,17 +1,15 @@
 {
-    "order": 2,
-    "title": "As Web Developer",
-    "description": "My priority is to excel at MERN stack, although I remember writing my e-commerce application using Spring-boot software very well. I'm also currently writing a mobile application using React-Native in which I use both Rest Api and Web Socket.",
-    "technologies": [
-        { "name": "React", "icon": "../../assets/icons/react.svg" },
-        { "name": "Redux", "icon": "../../assets/icons/redux.svg" },
-        { "name": "React-native", "icon": "../../assets/icons/react-native.svg" },
-        { "name": "Nodejs", "icon": "../../assets/icons/nodejs.svg" },
-        { "name": "Mongodb", "icon": "../../assets/icons/mongodb.svg" },
-        { "name": "Typescript", "icon": "../../assets/icons/typescript.svg" },
-        { "name": "Java", "icon": "../../assets/icons/java.svg" },
-        { "name": "Spring-boot", "icon": "../../assets/icons/spring-boot.svg" },
-        { "name": "MySql", "icon": "../../assets/icons/mysql.svg" },
-        { "name": "Firebase", "icon": "../../assets/icons/firebase.svg" }
-    ]
+  "order": 2,
+  "title": "As Web Developer",
+  "description": "My priority is to excel at MERN stack, although I remember writing my e-commerce application using Spring-boot software very well. I'm also currently writing a mobile application using React-Native in which I use both Rest Api and Web Socket.",
+  "technologies": [
+    { "name": "React-native", "icon": "../../assets/icons/react-native.svg" },
+    { "name": "Nodejs", "icon": "../../assets/icons/nodejs.svg" },
+    { "name": "Mongodb", "icon": "../../assets/icons/mongodb.svg" },
+    { "name": "Typescript", "icon": "../../assets/icons/typescript.svg" },
+    { "name": "Java", "icon": "../../assets/icons/java.svg" },
+    { "name": "Spring-boot", "icon": "../../assets/icons/spring-boot.svg" },
+    { "name": "MySql", "icon": "../../assets/icons/mysql.svg" },
+    { "name": "Firebase", "icon": "../../assets/icons/firebase.svg" }
+  ]
 }

@@ -7,6 +7,9 @@ const Wrapper = styled.section`
   position: relative;
   padding: 10rem 0;
   background-color: ${({ theme }) => theme.colors.color_primary};
+  ${({ theme }) => theme.mq.md} {
+    padding: 20rem;
+  }
 `
 const InnerWrapper = styled.div`
   display: grid;
