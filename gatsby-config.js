@@ -3,6 +3,8 @@ module.exports = {
     title: `Krzysztof Skoczek | Portfolio`,
     description: `It's Portfolio made with Gatsby and TypeScript by Krzysztof Skoczek - Front End | React Developer.`,
     author: `@jumper2210`,
+    url: `http://skoczekk.pl/`,
+    language: "en",
   },
   plugins: [
     `gatsby-plugin-typescript`,

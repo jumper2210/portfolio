@@ -29,9 +29,9 @@ interface FormValues {
 }
 
 const initialValues: FormValues = {
-  name: "name",
-  email: "email",
-  message: "message",
+  name: "",
+  email: "",
+  message: "",
 }
 interface Data {
   [key: string]: string
@@ -87,12 +87,13 @@ const FormSchema = () => {
           autoComplete="off"
           name="contact-form"
           data-netlify-honeypot="bot-field"
+          data-netlify="true"
         >
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
           <FormInput
             id="name"
-            label=""
+            label="name"
             onChangeFn={handleChange}
             onBlurFn={handleBlur}
             value={values.name}
@@ -101,7 +102,7 @@ const FormSchema = () => {
           />
           <FormInput
             id="email"
-            label=""
+            label="email"
             onChangeFn={handleChange}
             onBlurFn={handleBlur}
             value={values.email}
@@ -111,7 +112,7 @@ const FormSchema = () => {
           <FormInput
             textarea
             id="message"
-            label=""
+            label="message"
             onChangeFn={handleChange}
             onBlurFn={handleBlur}
             value={values.message}

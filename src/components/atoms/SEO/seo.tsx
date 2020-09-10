@@ -19,7 +19,6 @@ const SEO = ({ description, lang, meta, title }: Props) => {
             description
             author
             url
-            previewImage
             language
           }
         }
