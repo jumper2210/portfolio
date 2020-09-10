@@ -67,19 +67,11 @@ const FormSchema = () => {
           .finally(() => actions.setSubmitting(false))
       }}
     >
-      {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-      }) => (
+      {({ values, errors, touched, handleChange, handleBlur }) => (
         <Form
-          onSubmit={handleSubmit}
           autoComplete="off"
-          name="contact-form"
           data-netlify={true}
+          name="contact-form"
           data-netlify-honeypot="bot-field"
           data-netlify-recaptcha="true"
         >
