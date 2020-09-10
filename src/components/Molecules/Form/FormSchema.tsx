@@ -1,16 +1,28 @@
 import React from "react"
 import Button from "../../atoms/CustomButton/CustomButton"
 import FormInput from "./FormInput"
-import { Formik, Form, FormikHelpers, Field } from "formik"
+import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
 import styled from "styled-components"
 
-const ButtonWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 2rem;
+const StyledButton = styled(Button)`
+  width: 100%;
+  margin: 1.2rem 0 2.5rem;
+  border-radius: 3px;
+  ${({ theme }) => theme.mq.s} {
+    margin: 30px 0 50px;
+  }
 `
+
+interface Data {
+  [key: string]: string
+}
+
+interface FormValues {
+  name: string
+  email: string
+  message: string
+}
 
 const ContactSchema = Yup.object().shape({
   name: Yup.string().required("Your name is required!"),
@@ -22,20 +34,12 @@ const ContactSchema = Yup.object().shape({
     .required("Message is required!"),
 })
 
-interface FormValues {
-  name: string
-  email: string
-  message: string
-}
-
 const initialValues: FormValues = {
   name: "",
   email: "",
   message: "",
 }
-interface Data {
-  [key: string]: string
-}
+
 const encode = (data: Data) => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
@@ -47,30 +51,20 @@ const FormSchema = () => {
     <Formik
       initialValues={initialValues}
       validationSchema={ContactSchema}
-      onSubmit={(
-        values,
-        { setSubmitting, resetForm }: FormikHelpers<FormValues>
-      ) => {
-        const sendMessage = async () => {
-          try {
-            await fetch("/", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-              },
-              body: encode({
-                "form-name": "contact-form",
-                ...values,
-              }),
-            })
-            setSubmitting(false)
-            resetForm()
-
-            sendMessage()
-          } catch (err) {
-            setSubmitting(false)
-          }
-        }
+      onSubmit={(values, actions) => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ "form-name": "contact-form", ...values }),
+        })
+          .then(() => {
+            alert("Success")
+            actions.resetForm()
+          })
+          .catch(() => {
+            alert("Error")
+          })
+          .finally(() => actions.setSubmitting(false))
       }}
     >
       {({
@@ -80,14 +74,14 @@ const FormSchema = () => {
         handleChange,
         handleBlur,
         handleSubmit,
-        isSubmitting,
       }) => (
         <Form
           onSubmit={handleSubmit}
           autoComplete="off"
           name="contact-form"
+          data-netlify={true}
           data-netlify-honeypot="bot-field"
-          data-netlify="true"
+          data-netlify-recaptcha="true"
         >
           <Field type="hidden" name="form-name" />
           <Field type="hidden" name="bot-field" />
@@ -120,11 +114,7 @@ const FormSchema = () => {
             errors={errors.message}
           />
           <div data-netlify-recaptcha="true"></div>
-          <ButtonWrapper>
-            <Button isSubmitting={isSubmitting} type="submit">
-              Send a message{!isSubmitting}
-            </Button>
-          </ButtonWrapper>
+          <StyledButton type="submit">Send a message</StyledButton>
         </Form>
       )}
     </Formik>
