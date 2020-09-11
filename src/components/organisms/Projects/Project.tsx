@@ -57,6 +57,13 @@ const ProjectDescription = styled.p`
     line-height: 2.5rem;
   }
 `
+const DescriptionWrapper = styled.div`
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
 
 const Project = ({ title, description, demoLink, codeLink, image }: Props) => {
   return (
@@ -65,7 +72,9 @@ const Project = ({ title, description, demoLink, codeLink, image }: Props) => {
       <ImageWrapper>
         <Image fluid={image} alt={title} />
       </ImageWrapper>
-      <ProjectDescription>{description}</ProjectDescription>
+      <DescriptionWrapper>
+        <ProjectDescription>{description}</ProjectDescription>
+      </DescriptionWrapper>
       <ButtonsWrapper>
         <StyledButton
           as="a"

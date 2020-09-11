@@ -8,7 +8,7 @@ const Wrapper = styled.section`
   padding: 10rem 0;
   background-color: ${({ theme }) => theme.colors.color_primary};
   ${({ theme }) => theme.mq.md} {
-    padding: 20rem;
+    padding: 25rem 10rem;
   }
 `
 const InnerWrapper = styled.div`

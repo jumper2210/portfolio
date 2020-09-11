@@ -66,6 +66,10 @@ const Description = styled.p`
   font-family: ${({ theme }) => theme.fonts.subFont};
   padding: 3rem 0rem 7rem 0rem;
 `
+const DescriptionWrapper = styled.div`
+  width: 100%;
+  height: 20rem;
+`
 
 const Technologies = styled.ul`
   display: grid;
@@ -82,8 +86,9 @@ const Technology = styled.li<IconProps>`
   padding: 2rem;
   color: ${({ theme }) => theme.colors.white};
 `
+
 const Icon = styled.img`
-  width: 20%;
+  width: 30%;
   height: 30%;
   object-fit: contain;
 `
@@ -97,11 +102,14 @@ const TechnologyCard = ({ title, description, technologies }: Props) => {
         {technologies.map(({ icon, name }) => (
           <Technology key={name} icon={icon.publicURL}>
             {name}
+
             <Icon src={icon.publicURL} />
           </Technology>
         ))}
       </Technologies>
-      <Description>{description}</Description>
+      <DescriptionWrapper>
+        <Description>{description}</Description>
+      </DescriptionWrapper>
     </Wrapper>
   )
 }
