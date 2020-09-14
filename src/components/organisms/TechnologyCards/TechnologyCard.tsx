@@ -16,7 +16,7 @@ interface IconProps {
   readonly icon: string
 }
 
-const Wrapper = styled.div`
+const Wrapper = styled.article`
   position: relative;
   display: flex;
   justify-content: center;
@@ -40,7 +40,7 @@ const Wrapper = styled.div`
     z-index: 10;
   }
 `
-const Name = styled.h5`
+const Title = styled.h5`
   font-size: ${({ theme }) => theme.fontSize.m};
   font-family: ${({ theme }) => theme.fonts.subFont};
   font-weight: ${({ theme }) => theme.fontWeight.semiBold};
@@ -96,13 +96,12 @@ const TechnologyCard = ({ title, description, technologies }: Props) => {
   return (
     <Wrapper>
       <NameWrapper>
-        <Name>{title}</Name>
+        <Title>{title}</Title>
       </NameWrapper>
       <Technologies>
         {technologies.map(({ icon, name }) => (
           <Technology key={name} icon={icon.publicURL}>
             {name}
-
             <Icon src={icon.publicURL} />
           </Technology>
         ))}

@@ -57,7 +57,7 @@ const ProjectDescription = styled.p`
     line-height: 2.5rem;
   }
 `
-const DescriptionWrapper = styled.div`
+const DescriptionWrapper = styled.article`
   width: 100%;
   height: 10rem;
   display: flex;
