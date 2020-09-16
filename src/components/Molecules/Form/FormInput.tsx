@@ -49,6 +49,9 @@ const StyledInput = styled.input<InputProps>`
   border-radius: 0.4rem;
   resize: none;
   ${({ theme }) => theme.mq.md} {
+    &::last-of-type: {
+      padding: 0rem 3rem;
+    }
   }
 `
 

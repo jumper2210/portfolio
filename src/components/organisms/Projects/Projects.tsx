@@ -25,7 +25,7 @@ interface QueryProjectProps {
 }
 const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.color_primary};
-  padding: 10rem 0;
+  padding: 2rem 0;
   ${({ theme }) => theme.mq.md} {
     padding: 3rem 0;
   }

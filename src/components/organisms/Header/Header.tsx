@@ -38,7 +38,6 @@ const SubTitle = styled.span`
   font-size: ${({ theme }) => theme.fontSize.xxlm};
   font-family: ${({ theme }) => theme.fonts.subFont};
   font-weight: ${({ theme }) => theme.fonts.semiBold};
-  padding-left: 1rem;
 `
 const TitlesWrapper = styled.span`
   display: flex;
@@ -69,11 +68,11 @@ const InnerWrapper = styled.div`
 
 const HeaderIMG = styled.img`
   object-fit: contain;
-  width: 55%;
-  height: 55%;
+  width: 65%;
+  height: 65%;
   ${({ theme }) => theme.mq.lg} {
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
   }
 `
 const ButtonWrapper = styled.div`
@@ -118,7 +117,7 @@ const Header = () => {
     if (box && MainTitle && subTitle) {
       const words = [
         `Krzysztof Skoczek.`,
-        "Front-End-Developer.",
+        "Front-End Developer.",
         "React-Developer.",
         "React-Freelancer.",
       ]

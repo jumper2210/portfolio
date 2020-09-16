@@ -9,9 +9,6 @@ const StyledButton = styled(Button)`
   width: 100%;
   margin: 1.2rem 0 2.5rem;
   border-radius: 3px;
-  ${({ theme }) => theme.mq.s} {
-    margin: 30px 0 50px;
-  }
 `
 
 interface Data {
@@ -52,23 +49,41 @@ const FormSchema = () => {
       initialValues={initialValues}
       validationSchema={ContactSchema}
       onSubmit={(values, actions) => {
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact-form", ...values }),
-        })
-          .then(() => {
-            alert("Success")
-            actions.resetForm()
-          })
-          .catch(() => {
-            alert("Error")
-          })
-          .finally(() => actions.setSubmitting(false))
+        const sendMessage = async () => {
+          try {
+            fetch("/", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              body: encode({ "form-name": "contact-form", ...values }),
+            })
+              .then(() => {
+                alert("Success")
+                actions.resetForm()
+              })
+              .catch(() => {
+                alert("Error")
+              })
+              .finally(() => actions.setSubmitting(false))
+          } catch (err) {
+            console.log(err)
+          }
+        }
+        sendMessage()
       }}
     >
-      {({ values, errors, touched, handleChange, handleBlur }) => (
+      {({
+        values,
+        errors,
+        touched,
+        handleChange,
+        handleBlur,
+        handleSubmit,
+      }) => (
         <Form
+          onSubmit={handleSubmit}
+          method="POST"
           autoComplete="off"
           data-netlify={true}
           name="contact-form"
