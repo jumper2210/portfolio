@@ -5,6 +5,7 @@ interface Props {
   id: string
   value: string
   label: string
+  name: string
   onChangeFn: (e: React.ChangeEvent<HTMLInputElement>) => void
   onBlurFn: (e: any) => void
   touched: boolean | undefined
@@ -48,11 +49,6 @@ const StyledInput = styled.input<InputProps>`
   color: ${({ theme }) => theme.colors.white};
   border-radius: 0.4rem;
   resize: none;
-  ${({ theme }) => theme.mq.md} {
-    &::last-of-type: {
-      padding: 0rem 3rem;
-    }
-  }
 `
 
 const FormInput = ({

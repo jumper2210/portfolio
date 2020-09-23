@@ -17,7 +17,10 @@ const InnerWrapper = styled.div`
   align-items: center;
   border-radius: 2rem;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.51);
-  margin: 0 1.5rem;
+  margin: 0rem 1.5rem;
+  ${({ theme }) => theme.mq.md} {
+    grid-template-columns: 50rem;
+  }
 `
 const Title = styled.h4`
   color: ${({ theme }) => theme.colors.white};

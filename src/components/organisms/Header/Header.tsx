@@ -43,7 +43,7 @@ const TitlesWrapper = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
+  width: 50%;
   height: 15rem;
   ${({ theme }) => theme.mq.md} {
     height: 12rem;

@@ -25,19 +25,17 @@ interface QueryProjectProps {
 }
 const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.color_primary};
-  padding: 2rem 0;
+  padding: 10rem 0;
   ${({ theme }) => theme.mq.md} {
-    padding: 3rem 0;
+    padding: 15rem 0;
   }
 `
-
 const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0;
+  padding-bottom: 2rem;
 `
-
 const ProjectsSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
   font-size: ${({ theme }) => theme.fontSize.xl};
@@ -49,8 +47,7 @@ const InnerWrapper = styled.div`
   grid-template-columns: 1fr;
   ${({ theme }) => theme.mq.md} {
     grid-template-columns: 0.5fr 0.5fr;
-    grid-gap .5rem;
-    padding: 15rem;
+    padding: 10rem;
   }
 `
 
