@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from "react"
 import styled from "styled-components"
 import Button from "../../atoms/CustomButton/CustomButton"
-// import TextPlugin from "gsap/TextPlugin"
 import gsap from "gsap"
 import headerPhoto from "../../../assets/images/headerPhoto.png"
 import { Link } from "react-scroll"
@@ -43,7 +42,7 @@ const TitlesWrapper = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
+  width: 90%;
   height: 15rem;
   ${({ theme }) => theme.mq.md} {
     height: 12rem;
