@@ -15,7 +15,7 @@ My own Portfolio shows my design skills and preference. I wrote this project wit
 - & Other...
 
 ### Demo
-[click me](http://skoczekk.pl/)
+[click me](https://krzysztof-skoczek.netlify.app/)
 
 #### Author
 Krzysztof Skoczek

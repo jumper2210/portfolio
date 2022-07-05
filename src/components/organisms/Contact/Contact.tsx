@@ -45,7 +45,7 @@ const Contact = () => {
         <TitleWrapper>
           <Title>Or write a message</Title>
         </TitleWrapper>
-        <FormSchema />
+        {/* <FormSchema /> */}
       </InnerWrapper>
     </Wrapper>
   )
