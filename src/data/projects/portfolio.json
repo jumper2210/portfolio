@@ -1,8 +1,8 @@
 {
-    "order": 4,
+    "order": 1,
     "title": "My portfolio",
     "description": "My own Portfolio shows my design skills and preference. I wrote this project with Gatsby, Type Script and GraphQL",
     "codeLink": "https://github.com/jumper2210/portfolio",
-    "demoLink": "http://skoczekk.pl/",
+    "demoLink": "https://krzysztof-skoczek.netlify.app/",
     "image": "../../assets/images/portfolio.png"
 }
