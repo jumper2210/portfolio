@@ -3,6 +3,7 @@ interface MediaQueryProps {
 }
 
 const breakpoints: MediaQueryProps = {
+  xxs: 320,
   xs: 420,
   s: 576,
   md: 800,

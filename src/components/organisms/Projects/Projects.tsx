@@ -26,9 +26,6 @@ interface QueryProjectProps {
 const Wrapper = styled.section`
   background-color: ${({ theme }) => theme.colors.color_primary};
   padding: 10rem 0;
-  ${({ theme }) => theme.mq.md} {
-    padding: 15rem 0;
-  }
 `
 const TitleWrapper = styled.div`
   display: flex;

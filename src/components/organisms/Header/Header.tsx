@@ -58,10 +58,10 @@ const InnerWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 2rem 0;
+  padding: 0rem 15rem;
   ${({ theme }) => theme.mq.md} {
     text-align: left;
-    padding-left: 5rem;
+    padding-left: 0 5rem;
   }
 `
 

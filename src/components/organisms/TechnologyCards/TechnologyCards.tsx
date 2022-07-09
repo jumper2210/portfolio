@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import TechnologyCard from "./TechnologyCard"
 import { useStaticQuery, graphql } from "gatsby"
-// @ts-ignore
-import Fade from "react-reveal/Fade"
 
 interface QueryProps {
   allTechnologyCardsJson: {
@@ -30,18 +28,21 @@ const TitleWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 9rem 0rem 5rem 0rem;
+  text-align: center;
+  margin-bottom: 5rem;
   ${({ theme }) => theme.mq.md} {
-    padding: 0;
+  margin-bottom: 3rem;
   }
 `
 
 const InnerWrapper = styled.div`
-  display: grid;
-  ${({ theme }) => theme.mq.md} {
-    grid-template-columns: 0.5fr 0.5fr;
-    padding: 10rem;
-  }
+display: grid;
+grid-template-columns: 1fr;
+padding: 3rem 3rem;
+${({ theme }) => theme.mq.lg} {
+  grid-gap: 6rem;
+  grid-template-columns: 0.5fr 0.5fr;  
+}
 `
 const TechnologiesSectionTitle = styled.h3`
   color: ${({ theme }) => theme.colors.white};
@@ -76,14 +77,12 @@ const Technologies = () => {
       <InnerWrapper>
         {allTechnologyCardsJson.nodes.map(
           ({ title, description, technologies }) => (
-            <Fade right>
               <TechnologyCard
                 key={title}
                 title={title}
                 description={description}
                 technologies={technologies}
               />
-            </Fade>
           )
         )}
       </InnerWrapper>

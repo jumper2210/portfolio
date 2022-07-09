@@ -17,17 +17,28 @@ interface IconProps {
 }
 
 const Wrapper = styled.article`
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  height: 50rem;
+  justify-content: space-evenly;
   flex-direction: column;
-  padding: 1rem;
-  margin: 2rem;
+  padding: 14rem 2rem 10rem;
   border-radius: 2.5rem;
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.81);
   background: ${({ theme }) => theme.colors.color_primary};
   overflow: hidden;
+ 
+  ${({ theme }) => theme.mq.xxs} {
+     height: 78rem;
+     margin-top: 4rem;
+  }
+  ${({ theme }) => theme.mq.xs} {
+    height: 76rem;
+ }
+
+  ${({ theme }) => theme.mq.md} {
+    height: 80rem;
+  }
 
   &:before {
     content: "";
@@ -40,6 +51,7 @@ const Wrapper = styled.article`
     z-index: 10;
   }
 `
+
 const Title = styled.h5`
   font-size: ${({ theme }) => theme.fontSize.m};
   font-family: ${({ theme }) => theme.fonts.subFont};
@@ -48,13 +60,13 @@ const Title = styled.h5`
 `
 
 const NameWrapper = styled.div`
-  position: relative;
-  top: 0;
-  transform: translateY(-9px);
   display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
   align-items: center;
   justify-content: center;
-  width: 110%;
+  width: 100%;
   height: 4rem;
   background-color: ${({ theme }) => theme.colors.color_secondary};
 `
@@ -68,29 +80,51 @@ const Description = styled.p`
 `
 const DescriptionWrapper = styled.div`
   width: 100%;
-  height: 20rem;
-`
-
-const Technologies = styled.ul`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  ${({ theme }) => theme.mq.md} {
-    grid-template-columns: 0.5fr 0.5fr;
+  ${({ theme }) => theme.mq.xs} {
+    padding-bottom: 4rem;
   }
+`
+const Technologies = styled.ul` 
+  display: flex;
+  height: 100%;
+  flex-direction: column;  
 `
 const Technology = styled.li<IconProps>`
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  font-size: ${({ theme }) => theme.fontSize.m};
+  justify-content: space-between;
   padding: 2rem;
+  font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.colors.white};
+  ${({ theme }) => theme.mq.xxs} {
+  font-size: ${({ theme }) => theme.fontSize.xs};
+  justify-content: space-evenly;
+  padding:0rem 1rem;
+  height: 6rem;
+  }
+    ${({ theme }) => theme.mq.s} {
+    font-size: ${({ theme }) => theme.fontSize.lg};
+  }
 `
 
 const Icon = styled.img`
   width: 30%;
-  height: 30%;
+  height: 100%;
+  margin-left: 1rem;
   object-fit: contain;
+    ${({ theme }) => theme.mq.xxs} {
+    height: 60%;
+  }
+    ${({ theme }) => theme.mq.s} {
+    height: 80%;
+  }
+`
+const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+     ${({ theme }) => theme.mq.md} {
+    // flex-direction: row;
+  }
 `
 const TechnologyCard = ({ title, description, technologies }: Props) => {
   return (
@@ -98,6 +132,7 @@ const TechnologyCard = ({ title, description, technologies }: Props) => {
       <NameWrapper>
         <Title>{title}</Title>
       </NameWrapper>
+      <ContentWrapper>
       <Technologies>
         {technologies.map(({ icon, name }) => (
           <Technology key={name} icon={icon.publicURL}>
@@ -109,6 +144,7 @@ const TechnologyCard = ({ title, description, technologies }: Props) => {
       <DescriptionWrapper>
         <Description>{description}</Description>
       </DescriptionWrapper>
+      </ContentWrapper>
     </Wrapper>
   )
 }
