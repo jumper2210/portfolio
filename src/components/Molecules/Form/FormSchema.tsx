@@ -144,7 +144,7 @@ const FormSchema = () => {
 
           <LazyLoad height={70} offset={280}>
             <Recaptcha
-              sitekey={process.env.SITE_RECAPTCHA_KEY}
+              sitekey='6LeMmsggAAAAAGzYBwHfcSAGhjQbKluBsrudUdD8'
               render="explicit"
               theme="dark"
               verifyCallback={response => {
