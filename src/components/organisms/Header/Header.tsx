@@ -34,9 +34,12 @@ const MainTitle = styled.span`
 `
 const SubTitle = styled.span`
   color: ${({ theme }) => theme.colors.white};
-  font-size: ${({ theme }) => theme.fontSize.xxlm};
   font-family: ${({ theme }) => theme.fonts.subFont};
   font-weight: ${({ theme }) => theme.fonts.semiBold};
+  font-size: ${({ theme }) => theme.fontSize.xl};
+  ${({ theme }) => theme.mq.s} {
+    font-size: ${({ theme }) => theme.fontSize.xxlm};
+  }
 `
 const TitlesWrapper = styled.span`
   display: flex;
@@ -58,10 +61,10 @@ const InnerWrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  padding: 0rem 15rem;
-  ${({ theme }) => theme.mq.md} {
+  padding: 0rem;
+  ${({ theme }) => theme.mq.s} {
+    padding: 0rem 15rem;
     text-align: left;
-    padding-left: 0 5rem;
   }
 `
 
@@ -84,7 +87,7 @@ const ButtonWrapper = styled.div`
 const StyledButton = styled(Button)`
   padding: 1.5rem;
 `
-const MainTitleWrapper = styled.h1`
+const MainTitleWrapper = styled.div`
   position: relative;
   z-index: 10;
   overflow: hidden;
