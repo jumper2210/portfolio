@@ -1,0 +1,8 @@
+{
+  "order": 9,
+  "title": "Homepage",
+  "description": "Preview page using data from the Headless API",
+  "codeLink": "https://github.com/jumper2210/homepage",
+  "demoLink": "https://amazing-homepage.netlify.app/",
+  "image": "../../assets/images/homepage.png"
+}
