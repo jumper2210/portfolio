@@ -3,13 +3,17 @@ module.exports = {
     title: `Krzysztof Skoczek | Portfolio`,
     description: `It's Portfolio made with Gatsby and TypeScript by Krzysztof Skoczek - Front End | React Developer.`,
     author: `@jumper2210`,
-    url: `http://skoczekk.pl/`,
     language: "en",
+    url: "localhost:8000",
+    previewImage: "",
   },
   plugins: [
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-layout`,
       options: {
@@ -34,21 +38,17 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `data`,
+        path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `assets`,
         path: `${__dirname}/src/assets`,
       },
     },
-
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `./src/data/`,
-        plugins: [`gatsby-transformer-json`],
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

@@ -10,6 +10,7 @@ interface QueryProjectProps {
   allProjectsJson: {
     nodes: [
       {
+        id: string
         title: string
         description: string
         demoLink: string
@@ -53,6 +54,7 @@ const Projects = () => {
     {
       allProjectsJson(sort: { fields: order }) {
         nodes {
+          id
           title
           description
           demoLink
@@ -76,8 +78,8 @@ const Projects = () => {
       </TitleWrapper>
       <InnerWrapper>
         {allProjectsJson.nodes.map(
-          ({ title, description, demoLink, codeLink, image }) => (
-            <Fade left>
+          ({ title, description, demoLink, codeLink, image, id }) => (
+            <Fade key={id} left>
               <Project
                 key={title}
                 title={title}

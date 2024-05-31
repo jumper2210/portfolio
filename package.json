@@ -1,9 +1,9 @@
 {
   "name": "gatsby-starter-default",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Portfolio",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Krzysztof Skoczek",
   "dependencies": {
     "@types/react-helmet": "^6.1.0",
     "@types/react-lazyload": "^2.6.0",

@@ -27,14 +27,14 @@ const Wrapper = styled.article`
   box-shadow: 0px -1px 26px 10px rgba(0, 0, 0, 0.81);
   background: ${({ theme }) => theme.colors.color_primary};
   overflow: hidden;
- 
+
   ${({ theme }) => theme.mq.xxs} {
-     height: 78rem;
-     margin-top: 4rem;
+    height: 78rem;
+    margin-top: 4rem;
   }
   ${({ theme }) => theme.mq.xs} {
     height: 76rem;
- }
+  }
 
   ${({ theme }) => theme.mq.md} {
     height: 80rem;
@@ -84,10 +84,10 @@ const DescriptionWrapper = styled.div`
     padding-bottom: 4rem;
   }
 `
-const Technologies = styled.ul` 
+const Technologies = styled.ul`
   display: flex;
   height: 100%;
-  flex-direction: column;  
+  flex-direction: column;
 `
 const Technology = styled.li<IconProps>`
   display: flex;
@@ -97,12 +97,12 @@ const Technology = styled.li<IconProps>`
   font-size: ${({ theme }) => theme.fontSize.m};
   color: ${({ theme }) => theme.colors.white};
   ${({ theme }) => theme.mq.xxs} {
-  font-size: ${({ theme }) => theme.fontSize.xs};
-  justify-content: space-evenly;
-  padding:0rem 1rem;
-  height: 6rem;
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    justify-content: space-evenly;
+    padding: 0rem 1rem;
+    height: 6rem;
   }
-    ${({ theme }) => theme.mq.s} {
+  ${({ theme }) => theme.mq.s} {
     font-size: ${({ theme }) => theme.fontSize.lg};
   }
 `
@@ -112,18 +112,17 @@ const Icon = styled.img`
   height: 100%;
   margin-left: 1rem;
   object-fit: contain;
-    ${({ theme }) => theme.mq.xxs} {
+  ${({ theme }) => theme.mq.xxs} {
     height: 60%;
   }
-    ${({ theme }) => theme.mq.s} {
+  ${({ theme }) => theme.mq.s} {
     height: 80%;
   }
 `
 const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
-     ${({ theme }) => theme.mq.md} {
-    // flex-direction: row;
+  ${({ theme }) => theme.mq.md} {
   }
 `
 const TechnologyCard = ({ title, description, technologies }: Props) => {
@@ -133,17 +132,17 @@ const TechnologyCard = ({ title, description, technologies }: Props) => {
         <Title>{title}</Title>
       </NameWrapper>
       <ContentWrapper>
-      <Technologies>
-        {technologies.map(({ icon, name }) => (
-          <Technology key={name} icon={icon.publicURL}>
-            {name}
-            <Icon src={icon.publicURL} />
-          </Technology>
-        ))}
-      </Technologies>
-      <DescriptionWrapper>
-        <Description>{description}</Description>
-      </DescriptionWrapper>
+        <Technologies>
+          {technologies.map(({ icon, name }) => (
+            <Technology key={name} icon={icon.publicURL}>
+              {name}
+              <Icon src={icon.publicURL} />
+            </Technology>
+          ))}
+        </Technologies>
+        <DescriptionWrapper>
+          <Description>{description}</Description>
+        </DescriptionWrapper>
       </ContentWrapper>
     </Wrapper>
   )
