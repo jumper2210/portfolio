@@ -1,8 +1,0 @@
-{
-  "order": 8,
-  "title": "Mobile comics viewer",
-  "description": "Made with React-native. This project aims to download the comics made available by xkcd api",
-  "codeLink": "https://github.com/jumper2210/comics_viewer",
-  "demoLink": "https://expo.io/@jumper2210/comics_viewer",
-  "image": "../../assets/images/comics_viewer.png"
-}

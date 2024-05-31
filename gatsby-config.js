@@ -4,7 +4,7 @@ module.exports = {
     description: `It's Portfolio made with Gatsby and TypeScript by Krzysztof Skoczek - Front End | React Developer.`,
     author: `@jumper2210`,
     language: "en",
-    url: "localhost:8000",
+    url: "https://krzysztof-skoczek.netlify.app/",
     previewImage: "",
   },
   plugins: [

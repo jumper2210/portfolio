@@ -1,8 +1,0 @@
-{
-  "order": 10,
-  "title": "Netflix-clone",
-  "description": "Front-End netflix clone. It's my first project with using TS.",
-  "codeLink": "https://github.com/jumper2210/netflix-clone",
-  "demoLink": "https://netflix-clone-c3e1c.web.app/",
-  "image": "../../assets/images/netflix-clone.png"
-}

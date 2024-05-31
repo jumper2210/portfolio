@@ -1,8 +1,0 @@
-{
-    "order": 6,
-    "title": "Space-sandwich",
-    "description": "My first bigger React.js project. E-commerce sandwich shop, made with React.js and Spring. For now, only front-end side",
-    "codeLink": "https://github.com/jumper2210/space_sandwich",
-    "demoLink": "https://trusting-hopper-468785.netlify.app/",
-    "image": "../../assets/images/space-sandwich.png"
-}
